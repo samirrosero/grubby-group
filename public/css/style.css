@@ -1,0 +1,359 @@
+/* ============================================================
+   ESTILOS MODERNOS - IPS SALUD 2026
+   ============================================================ */
+
+:root {
+    /* Paleta de Colores Refinada */
+    --primary: #004a87;
+    --primary-dark: #00335d;
+    --secondary: #00a1e4;
+    --accent: #28a745;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    
+    /* Efectos */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- RESET & BASE --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; 
+    background-color: var(--bg-body); 
+    color: var(--text-main); 
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container { 
+    width: 92%; 
+    max-width: 1240px; 
+    margin: 0 auto; 
+}
+
+/* --- NAVEGACIÓN (Elevada) --- */
+.navbar { 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color); 
+    padding: 0.85rem 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+.navbar .logo { 
+    font-size: 1.6rem; 
+    font-weight: 800; 
+    color: var(--primary); 
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.navbar .logo span { color: var(--secondary); }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text-main); 
+    font-weight: 500; 
+    font-size: 0.95rem;
+    transition: var(--transition); 
+}
+
+.nav-links a:hover { color: var(--secondary); }
+
+/* --- HERO SECTION --- */
+.hero { 
+    position: relative; 
+    height: 80vh; 
+    display: flex; 
+    align-items: center; 
+    background: url('/images/hero-bg.jpg') center/cover no-repeat;
+    color: white; 
+}
+
+.hero-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: linear-gradient(75deg, rgba(0, 74, 135, 0.9) 0%, rgba(0, 161, 228, 0.4) 100%); 
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 700px; }
+.hero h1 { 
+    font-size: clamp(2.5rem, 6vw, 4rem); 
+    font-weight: 800; 
+    line-height: 1.1; 
+    margin-bottom: 1.5rem; 
+}
+
+/* --- NOVEDADES (Modern Cards) --- */
+.novedades { padding: 5rem 0; }
+.section-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary);
+}
+
+.card-img { height: 220px; position: relative; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-content { padding: 1.5rem; }
+.card-tag {
+    background: #e0f2fe;
+    color: var(--secondary);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.card-content h3 { font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--primary); }
+.card-content p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* --- BOTONES --- */
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover { background: var(--secondary); transform: scale(1.05); }
+
+.btn-more {
+    margin-top: 3rem;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+/* --- ALIADOS (Carousel Style) --- */
+.aliados-section {
+    background: white;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.aliados-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0.7;
+    filter: grayscale(1);
+    transition: var(--transition);
+}
+
+.aliados-grid:hover { opacity: 1; filter: grayscale(0); }
+
+/* --- FOOTER (Dark Tech) --- */
+.footer {
+    background: #0f172a;
+    color: #f1f5f9;
+    padding: 5rem 0 2rem;
+}
+
+.footer-col h4 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col ul a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul a:hover { color: white; transform: translateX(5px); }
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: white;
+    margin-right: 10px;
+    transition: var(--transition);
+}
+
+.social-links a:hover { background: var(--secondary); }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Aquí activarías tu menú hamburguesa */
+    .hero { height: 60vh; text-align: center; }
+    .novedades-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+/* --- NUEVAS REGLAS PARA FORMULARIOS Y MENÚ --- */
+
+/* Ocultar hamburguesa en Desktop */
+.hamburger {
+    display: none; /* Por defecto oculta */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* Estilo para las secciones de formularios */
+.listing {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 80vh;
+}
+
+.form-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    border: 1px solid var(--border-color);
+}
+
+.form-card h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Labels e Inputs modernos */
+form label {
+    display: block;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 5px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(0, 161, 228, 0.1);
+}
+
+/* Tablas con diseño de "App" */
+.table-responsive {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f1f5f9;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 1.2rem;
+}
+
+td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERY REVISADO */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Solo aparece en móvil */
+    }
+
+    .nav-links {
+        display: none; /* Se oculta y se maneja con la clase .active desde JS */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

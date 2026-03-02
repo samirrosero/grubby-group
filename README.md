@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
+# IPS Salud (Proyecto de Salud)
 
-```sh
-npm create astro@latest -- --template minimal
+Este repositorio alberga una aplicación web de ejemplo construida con Astro y un servidor Express/SQLite para manejar el registro de pacientes y la gestión de citas médicas.
+
+El sitio incluye:
+
+- Página de aterrizaje con información sobre el servicio de salud.
+- Formulario para registrar pacientes (`/registro`).
+- Interfaz para agendar citas (`/agendar`).
+- Vista de las citas programadas (`/citas`).
+- Backend simple en `backend/server.js` con endpoints REST y base de datos SQLite.
+
+## 🚀 Estructura del proyecto
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
+├── backend/                # servidor Node/Express
+│   └── server.js
+├── public/                 # activos estáticos (CSS, JS, imágenes)
+│   ├── css/
+│   └── js/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   └── pages/              # rutas Astro
+│       ├── index.astro
+│       ├── registro.astro
+│       ├── agendar.astro
+│       └── citas.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧞 Comandos útiles
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Ejecuta los siguientes comandos en la raíz del proyecto:
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Instala dependencias                            |
+| `npm run dev`             | Inicia el servidor Astro en `localhost:4321`    |
+| `npm run build`           | Genera el sitio de producción en `./dist/`      |
+| `npm run preview`         | Vista previa de la compilación                  |
+| `node backend/server.js`  | Inicia el backend en `http://localhost:3000`    |
 
-## 👀 Want to learn more?
+> ⚠️ Asegúrate de ejecutar primero `npm install` en la raíz antes de iniciar cualquiera de los servidores.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🛠 Tecnología
+
+- [Astro](https://astro.build) para el frontend
+- [Express](https://expressjs.com) + [SQLite](https://www.sqlite.org) para el backend
+
+## 📄 Notas
+
+Este es un ejemplo básico y se puede extender con autenticación, validación de formularios, estilos avanzados, etc.

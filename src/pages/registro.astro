@@ -1,0 +1,60 @@
+---
+
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Registro de Paciente</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+   <body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">IPS Salud</a>
+            <button id="menu-toggle" class="hamburger" aria-label="Menu">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/agendar">Agendar Cita</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section class="listing">
+    <div class="container">
+        <div class="form-card">
+            <h2>👤 Registro de Paciente</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Ingresa los datos para habilitar el agendamiento.</p>
+            
+            <form id="patient-form">
+                <label>Nombre Completo
+                    <input type="text" id="nombre" placeholder="Nombre y Apellidos" required />
+                </label>
+
+                <label>Fecha de Nacimiento
+                    <input type="date" id="fecha_nacimiento" required />
+                </label>
+
+                <label>Género
+                    <select id="genero" required>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </label>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Registrar Paciente</button>
+            </form>
+        </div>
+
+        <h3 class="section-title" style="font-size: 1.5rem;">Pacientes Recientes</h3>
+        <div id="patient-list" class="table-responsive">
+            </div>
+    </div>
+</section>
+</body>
+</html>

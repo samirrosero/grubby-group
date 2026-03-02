@@ -1,0 +1,39 @@
+---
+---
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ver Citas</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">IPS Salud</a>
+            <button id="menu-toggle" class="hamburger" aria-label="Menu">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/agendar">Agendar Cita</a></li>
+                <li><a href="/citas">Ver Citas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section class="listing">
+    <div class="container">
+        <h2 class="section-title">Citas Programadas</h2>
+        <div class="table-responsive">
+            <div id="appointment-list">
+                </div>
+        </div>
+    </div>
+</section>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="/js/funcion.js" is:inline></script>
+</body>
+</html>

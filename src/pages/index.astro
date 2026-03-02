@@ -2,16 +2,139 @@
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <title>IPS Salud - Bienvenidos</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">IPS <span>Salud</span></a>
+                <button id="menu-toggle" class="hamburger">&#9776;</button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/agendar">Agendar Cita</a></li>
+                </ul>
+            </div>
+        </nav>
+
+       <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Tu salud es nuestra <br /><span class="highlight">prioridad absoluta</span></h1>
+        <p>Brindamos servicios médicos de alta calidad con tecnología de punta y la calidez humana que tú mereces.</p>
+        <div class="hero-btns">
+            <a href="/agendar" class="btn">Agendar Cita Ahora</a>
+        </div>
+    </div>
+</section>
+
+<section class="novedades">
+    <div class="container">
+        <h2 class="section-title">Novedades y Salud</h2>
+        <div class="novedades-grid">
+            <article class="card">
+                <div class="card-img"><img src="/images/bogota.png" alt="Salud"></div>
+                <div class="card-content">
+                    <span class="card-tag">Plan de Beneficios</span>
+                    <h3>La Lepra ES CURABLE</h3>
+                    <p>El verdadero desafío es el estigma. Conoce más sobre el tratamiento gratuito y efectivo.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="/images/bogota.png" alt="Bogota"></div>
+                <div class="card-content">
+                    <span class="card-tag">Urgencias</span>
+                    <h3>Red de Apoyo en Bogotá</h3>
+                    <p>Localiza los puntos de atención inmediata al sur de la ciudad para emergencias.</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img"><img src="/images/pac.png" alt="Revista"></div>
+                <div class="card-content">
+                    <span class="card-tag">Bienestar</span>
+                    <h3>Nueva Revista PAC</h3>
+                    <p>Descubre consejos de nutrición y rutinas de ejercicio para toda la familia.</p>
+                </div>
+            </article>
+        </div>
+        <div style="text-align:center">
+            <a href="#" class="btn btn-more">Ver todas las noticias</a>
+        </div>
+    </div>
+</section>
+
+        <section class="aliados-section">
+            <div class="container">
+                <h3>NUESTROS ALIADOS</h3>
+                <div class="aliados-grid">
+                    <div class="aliado-logo">VIRREY SOLIS</div>
+                    <div class="aliado-logo">CLÍNICA LOS NOGALES</div>
+                    <div class="aliado-logo">UNIVER</div>
+                    <div class="aliado-logo">ALIANZA DIAGNÓSTICA</div>
+                    <div class="aliado-logo">GOLD RH</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>LEGALES</h4>
+                        <ul>
+                            <li><a href="#">Portabilidad</a></li>
+                            <li><a href="#">Protección de datos</a></li>
+                            <li><a href="#">Cuotas moderadoras 2025</a></li>
+                            <li><a href="#">Canal Anticorrupción</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>SERVICIOS</h4>
+                        <ul>
+                            <li><a href="#">Gratuidad en Salud</a></li>
+                            <li><a href="#">Municipios autorizados</a></li>
+                            <li><a href="#">Consulta de remisiones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>NORMATIVIDAD</h4>
+                        <ul>
+                            <li><a href="#">Decreto 780 de 2016</a></li>
+                            <li><a href="#">Circular 008 de 2018</a></li>
+                            <li><a href="#">Reporte de información</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-contact">
+                        <img
+                            src="/images/vigilado.svg"
+                            alt="Vigilado Supersalud"
+                            class="vigilado"
+                            style="width: 100px; height: auto; margin-bottom: 1rem;"
+                        />
+                        <p>Línea Nacional: 018000 114524</p>
+                        <div class="social-links">
+                            <a href="#">FB</a>
+                            <a href="#">TW</a>
+                            <a href="#">IG</a>
+                            <a href="#">IN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 IPS Salud - Todos los derechos reservados.
+                        Vigilado Supersalud.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="toast" class="toast hidden"></div>
+        <script src="/js/funcion.js" is:inline></script>
+    </body>
 </html>
