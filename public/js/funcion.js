@@ -125,8 +125,10 @@ document.addEventListener('DOMContentLoaded', async function () {
             });
 
             if (res.ok) {
-                // 1. GUARDAR EN LOCAL STORAGE LA ÚLTIMA CITA PARA PRUEBA
-                localStorage.setItem('ultima_cita_agendada', JSON.stringify(data));
+                // 1. guardar en localstorage todas las citas en un arreglo
+                const existing = JSON.parse(localStorage.getItem('citas_agendadas') || '[]');
+                existing.push(data);
+                localStorage.setItem('citas_agendadas', JSON.stringify(existing));
                 showToast('Cita agendada con éxito');
                 form.reset();
             }

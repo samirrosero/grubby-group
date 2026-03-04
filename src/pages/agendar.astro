@@ -18,6 +18,9 @@
             <ul class="nav-links">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/agendar">Agendar Cita</a></li>
+                <li><a href="/#novedades">Novedades</a></li>
+                <li><a href="/#aliados-section">Aliados</a></li>
+                <li><a href="/#footer">Footer</a></li>
             </ul>
         </div>
     </nav>
@@ -33,7 +36,7 @@
                     </select>
                 </label>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="two-col">
                     <label>Fecha <input type="date" id="fecha" required /></label>
                     <label>Hora <input type="time" id="hora" required /></label>
                 </div>
@@ -53,6 +56,53 @@
 </section>
 
     <div id="toast" class="toast hidden"></div>
+
+    <!-- footer included for consistency across pages -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>LEGALES</h4>
+                    <ul>
+                        <li><a href="#">Portabilidad</a></li>
+                        <li><a href="#">Protección de datos</a></li>
+                        <li><a href="#">Cuotas moderadoras 2025</a></li>
+                        <li><a href="#">Canal Anticorrupción</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SERVICIOS</h4>
+                    <ul>
+                        <li><a href="#">Gratuidad en Salud</a></li>
+                        <li><a href="#">Municipios autorizados</a></li>
+                        <li><a href="#">Consulta de remisiones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>NORMATIVIDAD</h4>
+                    <ul>
+                        <li><a href="#">Decreto 780 de 2016</a></li>
+                        <li><a href="#">Circular 008 de 2018</a></li>
+                        <li><a href="#">Reporte de información</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <img src="/images/vigilado.svg" alt="Vigilado Supersalud" class="vigilado" style="width: 100px; height: auto; margin-bottom: 1rem;" />
+                    <p>Línea Nacional: 018000 114524</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">TW</a>
+                        <a href="#">IG</a>
+                        <a href="#">IN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IPS Salud - Todos los derechos reservados. Vigilado Supersalud.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="/js/funcion.js" is:inline></script>
 </body>
 </html>

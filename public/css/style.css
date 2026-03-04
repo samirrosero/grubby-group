@@ -244,7 +244,15 @@ body {
     .nav-links { display: none; } /* Aquí activarías tu menú hamburguesa */
     .hero { height: 60vh; text-align: center; }
     .novedades-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; }
 }
 /* --- NUEVAS REGLAS PARA FORMULARIOS Y MENÚ --- */
 
@@ -263,6 +271,13 @@ body {
     padding: 4rem 0;
     background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
     min-height: 80vh;
+}
+
+/* grids reutilizables para formularios */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 .form-card {
@@ -349,11 +364,32 @@ td {
         width: 100%;
         background: white;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 1rem 1.5rem;
         box-shadow: var(--shadow-md);
     }
 
     .nav-links.active {
         display: flex;
     }
+
+    /* ajustes para el menú desplegable */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+}
+
+/* extras en móvil pequeño */
+@media (max-width: 480px) {
+    .nav-links a { font-size: 1rem; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-col { text-align: center; padding: 0 1rem; }
+
+    /* dos columnas del formulario pasen a una sola */
+    .two-col { grid-template-columns: 1fr; }
 }
